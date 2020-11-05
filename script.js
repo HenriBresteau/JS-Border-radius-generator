@@ -14,6 +14,17 @@ function resultDisplay() {
 }
 
 document.addEventListener('input', (e) => {
+
+    switch (e.target) {
+        case document.getElementById('radiusRange'):
+        case document.getElementById('radiusDisplay'):
+            radius = e.target.value;
+            break;
+        case document.getElementById('angleRange'):
+        case document.getElementById('angleDisplay'):
+            angle = e.target.value;
+            break;
+    }
     radius = e.target.value;
     resultDisplay();
 })
