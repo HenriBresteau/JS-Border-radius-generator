@@ -2,10 +2,15 @@ const canvas = document.getElementById('canvas');
 const codeToCopy = document.getElementById('codeToCopy');
 
 let radius =0;
-
+let angle= 0;
 function resultDisplay() {
-    canvas.style.borderRadius = radius +'px';
-    codeToCopy.value = `border-radius: ${radius}px;`
+    if (angle>0) {
+        canvas.style.borderRadius = angle +'% /'+radius +'px';
+        codeToCopy.value = `border-radius: ${angle}% / ${radius}px;`
+    } else {
+        canvas.style.borderRadius = radius +'px';
+        codeToCopy.value = `border-radius: ${radius}px;`
+    }
 }
 
 document.addEventListener('input', (e) => {
