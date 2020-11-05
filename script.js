@@ -28,3 +28,9 @@ document.addEventListener('input', (e) => {
     radius = e.target.value;
     resultDisplay();
 })
+
+function copyCode() {
+    codeToCopy.select();
+    document.execCommand('copy');
+    alert('Copied !');
+}
